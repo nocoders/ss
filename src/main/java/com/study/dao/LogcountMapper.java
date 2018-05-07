@@ -8,4 +8,6 @@ import com.study.utils.DataSource;
 public interface LogcountMapper {
 	
     public List<Logcount>selectAllLogCount();
+    
+    public Integer selectLogcountCount();
 }

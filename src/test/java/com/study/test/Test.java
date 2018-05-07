@@ -8,9 +8,10 @@
 */  
 package com.study.test;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import java.util.List;
+import java.util.Set;
 
-import com.study.service.RegionService;
+import com.study.utils.ReadTxtUtil;
 
 /**
  * @author linmeng
@@ -18,8 +19,9 @@ import com.study.service.RegionService;
  */
 public class Test {
 	
-	public void getcode() {
-		
+	public static void main(String[] args) {
+		 List<String[]> list = ReadTxtUtil.getTxt("E:\\1.txt");
+		System.out.println(list.size());
 		
 	}
 }

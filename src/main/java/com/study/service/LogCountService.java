@@ -19,5 +19,7 @@ import com.study.model.Logcount;
  */
 public interface LogCountService {
 	public List<Logcount>selectAllLogCount();
+    
+    public Integer selectLogcountCount();
 
 }

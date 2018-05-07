@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.study.dao.LogcountMapper">
-  <resultMap id="BaseResultMap" type="com.study.model.Logcount">
-    <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="city" jdbcType="VARCHAR" property="city" />
-    <result column="date" jdbcType="DATE" property="date" />
-    <result column="protocol" jdbcType="VARCHAR" property="protocol" />
-    <result column="bcpnum" jdbcType="INTEGER" property="bcpnum" />
-    <result column="loadrecord" jdbcType="INTEGER" property="loadrecord" />
-    <result column="saverecord" jdbcType="INTEGER" property="saverecord" />
-  </resultMap>
+  
   <select id="selectAllLogCount" resultType="com.study.model.Logcount">
         select city,date,protocol,bcpnum,loadrecord,saverecord from logcount
+    </select>
+   <select id="selectLogcountCount" resultType="Integer">
+        select count(*) from logcount
     </select>
 </mapper>

@@ -25,14 +25,14 @@ import com.study.service.LogCountService;
 public class LogCountServiceImpl implements LogCountService{
 	@Autowired
 	private LogcountMapper logcountMapper;
-	/* (non-Javadoc)
-	 * @see com.study.service.LogCountService#selectAllLogCount()
-	 */
 	@Override
 	public List<Logcount> selectAllLogCount() {
 		List<Logcount> count = logcountMapper.selectAllLogCount();
-		// TODO Auto-generated method stub
 		return count;
+	}
+	@Override
+	public Integer selectLogcountCount() {
+		return logcountMapper.selectLogcountCount();
 	}
 
 }
